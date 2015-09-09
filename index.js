@@ -1,5 +1,10 @@
+/* exported Matrix */
+/* jshint browser: true */
+
 function Matrix(runner)
 {
+    'use strict';
+    
     var root = document.getElementById('mocha');
     var boxList = root.appendChild(document.createElement('DIV'));
     boxList.className = 'blockList';
