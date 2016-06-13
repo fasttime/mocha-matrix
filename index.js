@@ -1,5 +1,4 @@
-/* exported Matrix */
-/* jshint browser: true */
+/* eslint-env browser */
 
 function Matrix(runner)
 {
