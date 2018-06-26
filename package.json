@@ -15,10 +15,7 @@
   "author": "Francesco Trotta <ft@fasttime.org> (https://github.com/fasttime)",
   "files": [
     "index.js",
-    "license.txt",
-    "mocha-matrix.css",
-    "package.json",
-    "*.md"
+    "mocha-matrix.css"
   ],
   "repository": {
     "type": "git",
