@@ -9,13 +9,13 @@
   ],
   "homepage": "https://github.com/fasttime/mocha-matrix",
   "bugs": {
-    "url": "https://github.com/fasttime/mocha-matrix"
+    "url": "https://github.com/fasttime/mocha-matrix/issues"
   },
   "license": "ISC",
   "author": "Francesco Trotta <ft@fasttime.org> (https://github.com/fasttime)",
   "files": [
     "index.js",
-    "LICENSE.txt",
+    "license.txt",
     "mocha-matrix.css",
     "package.json",
     "*.md"
@@ -25,12 +25,10 @@
     "url": "https://github.com/fasttime/mocha-matrix.git"
   },
   "scripts": {
-    "build": "npm install && grunt"
+    "build": "npm install && gulp"
   },
   "devDependencies": {
-    "grunt": "~1.0.1",
-    "grunt-cli": "~1.2.0",
-    "grunt-eslint": "~18.1.0",
-    "grunt-jscs": "~3.0.0"
+    "gulp": "~3.9.1",
+    "gulp-fasttime-lint": "~0.2.9"
   }
 }

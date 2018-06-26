@@ -3,7 +3,7 @@
 function Matrix(runner)
 {
     'use strict';
-    
+
     var root = document.getElementById('mocha');
     var boxList = root.appendChild(document.createElement('DIV'));
     boxList.className = 'blockList';
@@ -11,7 +11,7 @@ function Matrix(runner)
     errors.className = 'errors';
     createBoxes(runner.total);
     var currentBlock = boxList.firstChild;
-    
+
     runner.on(
         'test',
         function (test)
@@ -21,7 +21,7 @@ function Matrix(runner)
             currentBlock = currentBlock.nextSibling;
         }
     );
-    
+
     runner.on(
         'pass',
         function (test)
@@ -30,27 +30,27 @@ function Matrix(runner)
             show(box, 'test pass');
         }
     );
-    
+
     runner.on(
         'fail',
-        function (test, err)
+        function (obj, err)
         {
-            var id = 'error-' + errors.children.length;
-            var box = test.box;
-            box.href = '#' + id;
-            show(box, 'test fail');
-            
+            if (obj.type === 'test')
+            {
+                var id = 'error-' + errors.children.length;
+                var box = obj.box;
+                box.href = '#' + id;
+                show(box, 'test fail');
+            }
             var li = errors.appendChild(document.createElement('LI'));
-            
             var title = li.appendChild(document.createElement('H3'));
             title.id = id;
-            title.textContent = test.fullTitle();
-            
+            title.textContent = obj.fullTitle();
             var div = li.appendChild(document.createElement('DIV'));
             div.textContent = err.message;
         }
     );
-    
+
     runner.on(
         'end',
         function ()
@@ -59,7 +59,7 @@ function Matrix(runner)
             show(errors, 'errors');
         }
     );
-    
+
     function createBoxes(count)
     {
         for (var index = 0; index < count; ++index)
@@ -69,7 +69,7 @@ function Matrix(runner)
             boxList.appendChild(box);
         }
     }
-    
+
     function show(el, className)
     {
         el.className = className;
