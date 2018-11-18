@@ -1,9 +1,9 @@
 /* eslint-env browser */
 
+'use strict';
+
 function Matrix(runner)
 {
-    'use strict';
-
     var root = document.getElementById('mocha');
     var boxList = root.appendChild(document.createElement('DIV'));
     boxList.className = 'blockList';
@@ -12,7 +12,8 @@ function Matrix(runner)
     createBoxes(runner.total);
     var currentBlock = boxList.firstChild;
 
-    runner.on(
+    runner.on
+    (
         'test',
         function (test)
         {
@@ -22,7 +23,8 @@ function Matrix(runner)
         }
     );
 
-    runner.on(
+    runner.on
+    (
         'pass',
         function (test)
         {
@@ -31,7 +33,8 @@ function Matrix(runner)
         }
     );
 
-    runner.on(
+    runner.on
+    (
         'fail',
         function (obj, err)
         {
@@ -51,7 +54,8 @@ function Matrix(runner)
         }
     );
 
-    runner.on(
+    runner.on
+    (
         'end',
         function ()
         {
@@ -72,12 +76,6 @@ function Matrix(runner)
 
     function show(el, className)
     {
-        el.className = className;
-        setTimeout(
-            function ()
-            {
-                el.className = className + ' show';
-            }
-        );
+        el.className = className + ' show';
     }
 }

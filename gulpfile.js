@@ -4,7 +4,8 @@
 
 var gulp = require('gulp');
 
-gulp.task(
+gulp.task
+(
     'lint',
     function ()
     {

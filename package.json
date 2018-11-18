@@ -26,6 +26,6 @@
   },
   "devDependencies": {
     "gulp": "~3.9.1",
-    "gulp-fasttime-lint": "~0.2.9"
+    "gulp-fasttime-lint": "~0.4.2"
   }
 }
