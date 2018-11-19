@@ -5,7 +5,9 @@
   "keywords": [
     "matrix",
     "mocha",
-    "test"
+    "mocha-reporter",
+    "mocha-tests",
+    "testing"
   ],
   "homepage": "https://github.com/fasttime/mocha-matrix",
   "bugs": {

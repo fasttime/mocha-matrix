@@ -1,10 +1,5 @@
 #mocha { font: 12px 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 60px; }
 
-@media screen and (max-device-width: 480px)
-{
-    #mocha { margin: 17px; }
-}
-
 #mocha .blockList { line-height: 0; }
 
 #mocha .errors

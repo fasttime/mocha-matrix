@@ -29,7 +29,7 @@ function Matrix(runner)
         function (test)
         {
             var box = test.box;
-            show(box, 'test pass');
+            box.className += ' pass show';
         }
     );
 
@@ -38,12 +38,12 @@ function Matrix(runner)
         'fail',
         function (obj, err)
         {
+            var id = 'error-' + errors.children.length;
             if (obj.type === 'test')
             {
-                var id = 'error-' + errors.children.length;
                 var box = obj.box;
                 box.href = '#' + id;
-                show(box, 'test fail');
+                box.className += ' fail show';
             }
             var li = errors.appendChild(document.createElement('LI'));
             var title = li.appendChild(document.createElement('H3'));
@@ -60,7 +60,14 @@ function Matrix(runner)
         function ()
         {
             root.appendChild(errors);
-            show(errors, 'errors');
+            errors.className = 'errors';
+            setTimeout
+            (
+                function ()
+                {
+                    errors.className += ' show';
+                }
+            );
         }
     );
 
@@ -72,10 +79,5 @@ function Matrix(runner)
             box.className = 'test';
             boxList.appendChild(box);
         }
-    }
-
-    function show(el, className)
-    {
-        el.className = className + ' show';
     }
 }

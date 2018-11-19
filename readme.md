@@ -1,11 +1,11 @@
-# mocha-matrix
+# Mocha Matrix
 
-Mocha matrix test reporter for the browser, inspired by
+Mocha Matrix test reporter for the browser, inspired by
 [tj/mocha-matrix](https://github.com/tj/mocha-matrix).
 
 ## Setup Instructions
 
-Add mocha-matrix to the `devDependencies` of your Node.js project: in the console, switch to your
+Add Mocha Matrix to the `devDependencies` of your Node.js project: in the console, switch to your
 project folder and enter the following command.
 
 ```console
