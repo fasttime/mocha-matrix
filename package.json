@@ -1,6 +1,6 @@
 {
   "name": "mocha-matrix",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Fast Mocha test reporter for the browser",
   "keywords": [
     "matrix",
