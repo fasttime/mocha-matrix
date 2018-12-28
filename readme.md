@@ -1,3 +1,9 @@
+
+**This project is no longer maintained. Have a look at
+[Mocha Bar](https://github.com/fasttime/mocha-bar).**
+
+---
+
 # Mocha Matrix
 
 Mocha Matrix test reporter for the browser, inspired by
